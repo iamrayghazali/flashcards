@@ -14,14 +14,14 @@ const Question = ({question, showAnswer, setShowAnswer}) => {
         {currentQuestion ? (
           showAnswer ? (
             <div
-              className="card-inner w-full h-full absolute backface-hidden transition-transform duration-500 transform group-hover:rotate-y-180 cursor-pointer bg-eggshell rounded-lg shadow-lg p-6 font-bold flex justify-center items-center"  onClick={() => setShowAnswer(!showAnswer)}>
-              <p className="text-darkblue ">
+              className=" w-full h-full absolute backface-hidden group-hover:rotate-y-180 cursor-pointer bg-eggshell rounded-lg shadow-lg p-6 font-bold flex justify-center items-center"  onClick={() => setShowAnswer(!showAnswer)}>
+              <p className="text-darkblue p-20">
                 {currentQuestion.answer}
               </p>
             </div>
           ) : (
-            <div className="card-inner w-full h-full absolute backface-hidden transition-transform duration-500 transform group-hover:rotate-y-180 cursor-pointer bg-eggshell rounded-lg shadow-lg p-6 font-bold text-2xl flex justify-center items-center" onClick={() => setShowAnswer(!showAnswer)}>
-              <p className="text-darkblue ">
+            <div className=" w-full h-full absolute backface-hidden group-hover:rotate-y-180 cursor-pointer bg-eggshell rounded-lg shadow-lg p-6 font-bold text-2xl flex justify-center items-center" onClick={() => setShowAnswer(!showAnswer)}>
+              <p className="text-darkblue p-10">
                 {currentQuestion.question}
               </p>
             </div>

@@ -35,8 +35,8 @@ const FlashCardRotator = ({ groupQuestions, group, currentQuestionIndex, setCurr
   }, [currentQuestionIndex, questions, currentQuestion]);
 
   return (
-    <div className="m-10 w-1/2  border-2 border-darkblue bg-blue-800 shadow-lg rounded-lg p-8">
-      <h1 className="text-darkblue text-1xl font-light mb-6">{group}</h1>
+    <div className="rounded-3xl  bg-blue-800 shadow-lg p-8 m-8">
+      <h1 className="text-white text-1xl font-light mb-6">{group}</h1>
       {currentQuestion ? (
         <>
           <Question question={currentQuestion} showAnswer={showAnswer} setShowAnswer={setShowAnswer}/>
@@ -62,7 +62,7 @@ const FlashCardRotator = ({ groupQuestions, group, currentQuestionIndex, setCurr
           </div>
         </>
       ) : (
-        <p className="text-grey">Select group!</p>
+        <p className="text-darkblue text-center text-6xl p-3 m-24 ">Select group!</p>
       )}
     </div>
   );

@@ -67,19 +67,19 @@ const QuestionContainer = ({moduleName}) => {
 
   return (
     <>
+    <div className="p-3 bg-black text-white h-screen ">
       <div className="text-center m-5">
         {[1, 2, 3, 4, 5, 6].map((number, index) => (
           <button
             key={number}
             onClick={() => getGroupName(number)}
-            className="m-2 bg-darkblue text-eggshell py-2 px-4 rounded-lg hover:bg-grey transition duration-300"
+            className="m-2 bg-darkblue text-eggshell py-2 px-4 rounded-lg hover:text-darkblue hover:bg-eggshell transition duration-250"
           >
             {`${index + 1} - ${names[number - 1]}`}
           </button>
         ))}
       </div>
-      <div className="w-full h-3/4 bg-black felx justify-center items-center">
-
+      <div className="w-auto h-3/4 m-20 rounded-3xl bg-darkblue border-2 border-grey">
         <FlashCardRotator
           groupQuestions={groupQuestions}
           group={group}
@@ -87,8 +87,10 @@ const QuestionContainer = ({moduleName}) => {
           setCurrentQuestionIndex={setCurrentQuestionIndex}
         />
       </div>
-    </>
-  );
+    </div>
+</>
+)
+  ;
 };
 
 export default QuestionContainer;
